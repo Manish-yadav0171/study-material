@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+}
+
+/* HEADER */
+header {
+  background: #2563eb;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* RADIO HIDE */
+input[type="radio"] {
+  display: none;
+}
+
+/* INITIAL SEM SELECT */
+.semester-select {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.semester-select label {
+  padding: 12px 28px;
+  background: #1e293b;
+  color: white;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* TOP RIGHT SEM SWITCH */
+.semester-switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: none;
+  gap: 10px;
+}
+
+.semester-switch label {
+  background: #1e293b;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* SEM CONTENT */
+.semester {
+  display: none;
+  padding: 20px;
+}
+
+/* SHOW SEM */
+#sem1:checked ~ .sem1,
+#sem2:checked ~ .sem2 {
+  display: block;
+}
+
+/* HIDE CENTER SELECT */
+#sem1:checked ~ .semester-select,
+#sem2:checked ~ .semester-select {
+  display: none;
+}
+
+/* SHOW TOP SWITCH */
+#sem1:checked ~ .semester-switch,
+#sem2:checked ~ .semester-switch {
+  display: flex;
+}
+
+/* SUBJECT CARD */
+.subject-card {
+  background: white;
+  margin: 20px auto;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.subject-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #22c55e, #2563eb);
+  border-bottom-left-radius: 100%;
+}
+
+.subject-title {
+  padding: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* UNITS */
+.unit-box {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subject-card input:checked ~ .unit-box {
+  max-height: 500px;
+  padding-bottom: 15px;
+}
+
+.unit-box a {
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #2563eb;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 600px) {
+  .subject-card {
+    width: 95%;
+  }
+
+  .semester-switch {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+/* Hide checkbox */
+.subject-card input {
+  display: none;
+}
+
+/* Subject title */
+.subject-title {
+  padding: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Unit box closed by default */
+.unit-box {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Open on click */
+.subject-card input:checked ~ .unit-box {
+  max-height: 500px;
+  padding-bottom: 15px;
+}
