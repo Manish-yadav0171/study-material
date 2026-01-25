@@ -125,8 +125,8 @@ input[type="radio"] {
 
 .unit-box a {
   background: #f1f5f9;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 5px;
+  border-radius: 3px;
   text-decoration: none;
   color: #2563eb;
 }
