@@ -95,8 +95,8 @@ input[type="radio"] {
   position: absolute;
   top: 0;
   right: 0;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   background: linear-gradient(135deg, #22c55e, #2563eb);
   border-bottom-left-radius: 100%;
 }
@@ -119,10 +119,9 @@ input[type="radio"] {
 }
 
 .subject-card input:checked ~ .unit-box {
-  max-height: 500px;
-  padding-bottom: 15px;
+  max-height: 9999px;
+  padding: 15px;
 }
-
 .unit-box a {
   background: #f1f5f9;
   padding: 5px;
@@ -175,8 +174,8 @@ footer {
   gap: 10px;
 }
 
-/* Open on click */
+/* Open on click
 .subject-card input:checked ~ .unit-box {
   max-height: 500px;
   padding-bottom: 15px;
-}
+} */
