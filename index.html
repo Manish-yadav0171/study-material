@@ -1,4 +1,5 @@
-  <!DOCTYPE html>
+<!--study material -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +7,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const allCheckboxes = document.querySelectorAll(".subject-card input");
 
+   allCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+
+      if (this.checked) {
+        // Close all others
+        allCheckboxes.forEach((cb) => {
+          if (cb !== this) cb.checked = false;
+        });
+      }
+
+    });
+  });
+});
+</script>
 <body>
 
 <header>
@@ -170,21 +188,12 @@ Sustainability (25AS103)</label>
 <label for="sem2-sub3">📘 Basics of Mechanical & Automation Engg </label>
 
   <div class="unit-box">
-    <a href="https://drive.google.com/file/d/1alaiojxhcaPdmnHhfdZQJUPkDYvfu8VS/view?usp=drive_link">Unit 1 – Introduction to Mechanics </a>
-     <a href="https://drive.google.com/file/d/1eYXKA2W1M9MNr57PC6lwLRC2aLfxt5wh/view?usp=drive_link">Unit 1 – Gate Way Notes </a>
-     <a href="https://drive.google.com/file/d/1u6K-OyJss5rq1Ep3zesWQttssr2M09Bj/view?usp=sharing">Unit 1 – Hand Written </a>
-    <a href="https://drive.google.com/file/d/1JvwPi6X5s1sf8QXX-gbqaGNFbMmf0sVV/view?usp=drive_link">Unit 2 – Basic Thermodynamics</a>
-     <a href="https://drive.google.com/file/d/1SON0L0LdYB7yunnAKZSnkTYpYX2wfGV4/view?usp=drive_link">Unit 2 – Gate Way Notes </a>
-     <a href="https://drive.google.com/file/d/1_xuNL6gYUxQZatK_FaBYrhblNDRklt7o/view?usp=drive_link">Unit 2 – Hand Written </a>
-    <a href="">Unit 3 – Internal Combustion Engine & Electric Vehicle</a>
-    <a href="">Unit 3 – Gate Way Notes </a>
-    <a href="">Unit 3 – Hand Written </a>
-    <a href="https://docs.google.com/presentation/d/1F5CmGcWTaF6QP6vdRvPil5x7os6-ozfB/edit?usp=drive_link&ouid=117338083428927307080&rtpof=true&sd=true">Unit 4 – Introduction to Automation and Control </a>
-    <a href="">Unit 4 – Gate Way Notes </a>
-    <a href="">Unit 4 – Hand Written </a>
-    <a href="https://drive.google.com/file/d/10N17gd2z363mEzXIPPfkOYi21zcSQL21/view?usp=drive_link">Unit 5 – Emerging Trends in Engineering</a>
-    <a href="">Unit 5 – Gate Way Notes </a>
-    <a href="">Unit 5 – Hand Written </a>
+    <a href="https://drive.google.com/drive/folders/19to-jQnjwHZvVIf7w5Lov4Kq_DsjeGNJ?usp=drive_link">Unit 1 – Introduction to Mechanics </a>
+    <a href="https://drive.google.com/drive/folders/1k5IefPVkH0iMkR0-jlzAfB9R6m61nKpV?usp=drive_link">Unit 2 – Basic Thermodynamics</a>
+    <a href="https://drive.google.com/drive/folders/1hlzzhht6hduPmvcafMYhdtEK0Ifx75cn?usp=drive_link">Unit 3 – Internal Combustion Engine & Electric Vehicle</a>
+    <a href="https://drive.google.com/drive/folders/1tKSzCHBXLTzGqQUnWEO5NBOjW63Jdezt?usp=drive_link">Unit 4 – Introduction to Automation and Control </a>
+    <a href="https://drive.google.com/drive/folders/1okjtJh6OpmI3QE6DOCbPFs4D9o1FGsey?usp=drive_link">Unit 5 – Emerging Trends in Engineering</a>
+
     
   </div>
 </div>
