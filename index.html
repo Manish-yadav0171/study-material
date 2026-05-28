@@ -3,49 +3,34 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Study Material Portal</title>
+<title>Portal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const allCheckboxes = document.querySelectorAll(".subject-card input");
-
-   allCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", function () {
-
-      if (this.checked) {
-        // Close all others
-        allCheckboxes.forEach((cb) => {
-          if (cb !== this) cb.checked = false;
-        });
-      }
-
-    });
-  });
-});
-</script>
 <body>
 
 <header>
-  <h1>📚 Study Material Portal</h1>
+  <h1>📚 Portal</h1>
   <p>One Stop Solution For You Buddies</p>
 </header>
 <!-- ===== SEMESTER RADIO ===== -->
 <input type="radio" name="semester" id="sem1">
 <input type="radio" name="semester" id="sem2">
+ <input type="radio" name="semester" id="papers"> 
 
 <!-- ===== TOP RIGHT GROUP SWITCH ===== -->
 <div class="semester-switch">
   <label for="sem1">Electrical Group</label>
   <label for="sem2">Electronics Group</label>
+  <label for="papers">Previous Papers</label>
 </div>
 
 <!-- ===== INITIAL GROUP SELECTION ===== -->
-<div class="semester-select">
+  <div class="semester-select">
   <label for="sem1">Electrical Group</label>
   <label for="sem2">Electronics Group</label>
-</div>
+   <label for="papers">Previous Papers</label>
+</div> 
 
 <!-- ================= ELECTRICAL GROUP ================= -->
 <section class="semester sem1">
@@ -175,11 +160,11 @@ Sustainability (25AS103)</label>
 <label for="sem2-sub2">📘Data Structure Using C++</label>
 
   <div class="unit-box">
-    <a href="#"target="_blank">Unit 1 – INTRODUCTION</a>
-    <a href="#"target="_blank">Unit 2 – SORTING</a>
-    <a href="#"target="_blank">Unit 3 – LINKED LIST </a>
-    <a href="#"target="_blank">Unit 4 – HASHING</a>
-    <a href="#"target="_blank">Unit 5 – SET </a>
+    <a href="https://drive.google.com/drive/folders/1ONiuHHjxdVnibduO-CfTEaB9KFvT_e0o?usp=drive_link"target="_blank">Unit 1 – INTRODUCTION</a>
+    <a href="https://drive.google.com/drive/folders/1IMySWxlljdqKaoaRcbvfWiEGhYcfKJIg?usp=drive_link"target="_blank">Unit 2 – SORTING</a>
+    <a href="https://drive.google.com/drive/folders/1DiUPsuOfsHFPG9nBW7z_KIImOpLccvqw?usp=drive_link"target="_blank">Unit 3 – LINKED LIST </a>
+    <a href="https://drive.google.com/drive/folders/151xNHIWg9nj6YdQz6wnHX-Lp34RMLwaB?usp=drive_link"target="_blank">Unit 4 – HASHING</a>
+    <a href="https://drive.google.com/drive/folders/12AkgQFyzBqd83I8BVw_BWmyNlE_ONdpO?usp=drive_link"target="_blank">Unit 5 – SET </a>
   </div>
 </div>
 
@@ -218,7 +203,7 @@ Sustainability (25AS103)</label>
   <div class="unit-box">
     <a href="https://drive.google.com/drive/folders/1gZ7G6tZRwBrURXT1xQaa46X87w2QsCbn?usp=drive_link"target="_blank">Unit 1 – Vocabulary building: Word formation, Subject verb agreement (Discussion and Quiz)</a>
     <a href="https://drive.google.com/drive/folders/1c0FWHT1GdR_Kk1mVOtbYysxsQ8vDpaq_?usp=drive_link"target="_blank">Unit 2 – Listening Skills: Discussion of topic, Ted talk listening video to be played in the class</a>
-    <a href="#"target="_blank">Unit 3 – Speaking Skills: Speaking mode, Nonverbal and Para linguistic Cues, and Overcoming Stage fright</a>
+    <a href="https://drive.google.com/drive/folders/1pCRqraMtDxTmLRsZ6NT9uBMwUiW2HPLI?usp=drive_link">Unit 3 – Speaking Skills: Speaking mode, Nonverbal and Para linguistic Cues, and Overcoming Stage fright</a>
     <a href="#"target="_blank">Unit 4 – Reading Skills: Discussion of the Topic, Reading comprehension styles</a>
     <a href="#"target="_blank">Unit 5 – Writing Skills: Incorporating 7Cs in writing, Situation based blog writing, Content organization for
 Leave, Complaint, Permission, and Internship letter writing</a>
@@ -238,8 +223,39 @@ Leave, Complaint, Permission, and Internship letter writing</a>
     <a href="https://drive.google.com/file/d/1UCz0PYMxkQNmrX3wiRMGF65ocEmMEuAG/view?usp=drive_link"target="_blank">Unit 5 – IPR and Entrepreneurships -II</a>
   </div>
 </div>
+<div class="subject-card">
+  <input type="checkbox" id="sem2-sts">
+  <label for="sem2-sts">STs papers</label>
+  <div class="unit-box">
+    <a href="">SEM 2 STs</a>
+  </div>
+</div>
+
 
 </section>
+
+<!-- ================= PREVIOUS PAPERS ================= -->
+ <section class="semester papers">
+
+  <div class="subject-card">
+    <input type="checkbox" id="papers-sem1">
+    <label for="papers-sem1">📄 Sem 1 Previous Papers</label>
+
+    <div class="unit-box">
+      <a href="https://drive.google.com/drive/folders/1Z2bFZ6ghIHZr_jg1UitZtv1pChpstjRk?usp=drive_link" target="_blank">Sem 1 Papers</a>
+    </div>
+  </div>
+
+  <div class="subject-card">
+    <input type="checkbox" id="papers-sem2">
+    <label for="papers-sem2">📄 Sem 2 Previous Papers</label>
+
+    <div class="unit-box">
+      <a href="https://drive.google.com/drive/folders/1K0LQdRcjdFcmZgbepeBnbbQVvmzgvh1V?usp=sharing_blank" target="_blank">Open Sem 2 Papers</a>
+    </div>
+  </div>
+      
+</section> 
 
 <footer>
   © Developed by ......| All Rights Reserved  
@@ -247,6 +263,7 @@ Leave, Complaint, Permission, and Internship letter writing</a>
 All cont      ent are collected from respected subject teacher 
   for personal use </br>
 </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
